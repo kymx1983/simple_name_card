@@ -11,7 +11,7 @@
 
   <% @name_cards.each do |name_card| %>
     <tr>
-      <td><%= name_card.id %></td>
+      <td><%= link_to(name_card.id, "/name_card/show/#{name_card.id}") %></td>
       <td><%= name_card.name %></td>
       <td><%= name_card.gender %></td>
       <td><%= name_card.limit_date %></td>

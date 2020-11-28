@@ -1,2 +1,10 @@
-<h1>NameCard#show</h1>
-<p>Find me in app/views/name_card/show.html.erb</p>
+<h1>詳細</h1>
+ID　　　　<%= @name_card.id %><br>
+名前　　　<%= @name_card.name %><br>
+性別　　　<%= @name_card.gender %><br>
+生年月日　<%= @name_card.limit_date %><br>
+住所　　　<%= @name_card.address %><br>
+電話番号　<%= @name_card.tel %><br><br>
+
+<%= link_to("編集", "/name_card/edit/#{@name_card.id}") %>
+<%= link_to("削除", "/name_card/destroy/#{@name_card.id}") %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'name_card/index'
-  get 'name_card/show'
+  get "name_card/show/:id" => "name_card#show"
   get 'name_card/new'
   get 'name_card/edit'
   post "name_card/create"

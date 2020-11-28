@@ -4,6 +4,7 @@ class NameCardController < ApplicationController
   end
 
   def show
+    @name_card = NameCard.find_by(id: params[:id])
   end
 
   def new
