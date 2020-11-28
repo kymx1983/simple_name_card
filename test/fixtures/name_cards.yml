@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  gender: 1
+  limit_date: 2020-11-28
+  address: MyText
+  tel: 1
+
+two:
+  name: MyText
+  gender: 1
+  limit_date: 2020-11-28
+  address: MyText
+  tel: 1
