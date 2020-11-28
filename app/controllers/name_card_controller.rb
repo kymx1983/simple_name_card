@@ -1,6 +1,6 @@
 class NameCardController < ApplicationController
   def index
-    @name_card = NameCard.all
+    @name_cards = NameCard.all
   end
 
   def show
