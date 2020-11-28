@@ -1,2 +1,26 @@
-<h1>NameCard#edit</h1>
-<p>Find me in app/views/name_card/edit.html.erb</p>
+<h1>編集</h1>
+<%= form_tag("/name_card/update") do %>
+  <input type="hidden" name="id" value="<%= @name_card.id %>"/>
+  氏名　　　
+  <input type="text" name="name" value="<%= @name_card.name %>"/>
+  <br><br>
+
+  性別　　　
+  <input type="number" name="gender" value="<%= @name_card.gender %>"/>
+  <br><br>
+
+  生年月日　
+  <input type="date" name="birthday" value="<%= @name_card.limit_date %>"/>
+  <br><br>
+
+  住所　　　
+  <input type="text" name="address" value="<%= @name_card.address %>"/>
+  <br><br>
+
+  電話番号　
+  <input type="text" name="tel" value="<%= @name_card.tel %>"/>
+  <br><br>
+
+  <input type="submit" value="確定">
+
+<% end %>

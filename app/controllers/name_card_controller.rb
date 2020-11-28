@@ -12,11 +12,26 @@ class NameCardController < ApplicationController
   end
 
   def edit
+    @name_card = NameCard.find_by(id: params[:id])
   end
 
   def create
 
     name_Card = NameCard.new
+    name_Card.name  = params[:name]
+    name_Card.gender  = params[:gender]
+    name_Card.limit_date  = params[:birthday]
+    name_Card.address  = params[:address]
+    name_Card.tel  = params[:tel]
+
+    name_Card.save
+    redirect_to('/name_card/index')
+
+  end
+
+  def update
+    name_Card = NameCard.find_by(id: params[:id])
+
     name_Card.name  = params[:name]
     name_Card.gender  = params[:gender]
     name_Card.limit_date  = params[:birthday]
