@@ -1,2 +1,25 @@
-<h1>NameCard#new</h1>
-<p>Find me in app/views/name_card/new.html.erb</p>
+<h1>新規登録</h1>
+<%= form_tag("/name_card/create") do %>
+  氏名　　　
+  <input type="text" name="name"/>
+  <br><br>
+
+  性別　　　
+  <input type="number" name="gender"/>
+  <br><br>
+
+  生年月日　
+  <input type="date" name="birthday"/>
+  <br><br>
+
+  住所　　　
+  <input type="text" name="address"/>
+  <br><br>
+
+  電話番号　
+  <input type="text" name="address"/>
+  <br><br>
+
+  <input type="submit" value="確定">
+
+<% end %>
