@@ -27,4 +27,11 @@ class NameCardController < ApplicationController
     redirect_to('/name_card/index')
 
   end
+
+  def destroy
+    @name_card = NameCard.find_by(id: params[:id])
+    @name_card.destroy
+
+    redirect_to("/name_card/index")
+  end
 end
